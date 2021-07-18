@@ -4,7 +4,6 @@ on: push
     
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -13,7 +12,7 @@ jobs:
     - name: Package Application
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
-        path: .
+        path: src
 
     - uses: actions/upload-artifact@v2
       with:
