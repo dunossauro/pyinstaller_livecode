@@ -9,8 +9,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Package Application
+    - name: Package Windows
       uses: JackMcKew/pyinstaller-action-windows@main
+      with:
+        path: src
+
+    - name: Package Linux
+      uses: JackMcKew/pyinstaller-action-linux@main
       with:
         path: src
 
@@ -18,3 +23,8 @@ jobs:
       with:
         name: name-of-artifact
         path: src/dist/windows
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: name-of-artifact
+        path: src/dist/linux
