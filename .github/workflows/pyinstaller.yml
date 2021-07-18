@@ -21,10 +21,10 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: name-of-artifact
+        name: example_win
         path: src/dist/windows
 
     - uses: actions/upload-artifact@v2
       with:
-        name: name-of-artifact
+        name: example_linux
         path: src/dist/linux
